@@ -1,5 +1,6 @@
 # Image-Colorization-Project
 Students: Andrijana Kešelj, Anđela Maksimović
+
 This is the final version of the image colorization project done by students of DSAI ETF Sarajevo.
 Important note: Due to inability to delete past commits and some errors present in our previous GitHub repository's files, we decided to push the whole project only after completing everything.
 
