@@ -20,8 +20,10 @@ This project uses deep learning to automatically colorize grayscale images, rest
 - [⚙️ Model version and optimizers](#️-model-version-and-optimizers)
 - [👀 Results](#-results)
 - [📏 Metrics](#-metrics)
+- [## 🔮 Conclusion and future steps](#-conclusion-and-future-steps).
 - [📜 References](#-references)
 - [✒️ License](#-license)
+  
 
 ## 👀 Overview
 
@@ -52,6 +54,7 @@ Before training, images are resized and normalized to fit the model input requir
 ## 🧹 Data Preparation
 
 The dataset was split into training, validation, and test sets. We normalized all channels to the [-1, 1] range for optimal model performance. To enhance generalization, we applied simple data augmentation—random horizontal flips—to the training data. 
+For more details, check-out our [notebook](https://github.com/aandrijana/Image-Colorization-Project/blob/main/final_data_preprocessing.ipynb)
 
 ## ⌨️ Project Challenges and Key Concepts
 During this project, we encountered several challenges:
@@ -75,6 +78,8 @@ We also explored Generative Adversarial Networks (GANs), especially the Pix2Pix 
 ## 👀 Results
 
 ## 📏 Metrics
+
+## 🔮 Conclusion and future steps
 
 ## 📜 References
 - [Levin](https://www.researchgate.net/publication/2896183_Colorization_using_Optimization)
