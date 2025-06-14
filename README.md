@@ -20,7 +20,7 @@ This project uses deep learning to automatically colorize grayscale images, rest
 - [⚙️ Model version and optimizers](#️-model-version-and-optimizers)
 - [👀 Results](#-results)
 - [📏 Metrics](#-metrics)
-- [🔮 Conclusion and future steps](#-conclusion-and-future-steps)
+- [🏁 Conclusion and future steps](#-conclusion-and-future-steps)
 - [📜 References](#-references)
 - [✒️ License](#-license)
   
@@ -79,8 +79,16 @@ We also explored Generative Adversarial Networks (GANs), especially the Pix2Pix 
 
 ## 📏 Metrics
 
-## 🔮 Conclusion and future steps
+## 🏁 Conclusion and future steps
+This project successfully implements a Generative Adversarial Network (GAN) to perform automatic image colorization. The model produces vibrant and perceptually realistic colors.  The primary limitation was hardware memory, which constrained the training resolution and model complexity.
 
+Future Steps:
+With access to more computational resources, the key priorities are:
+- Train on higher-resolution images (228x228) with a deeper model to generate finer details.
+- Integrate attention mechanisms to improve contextual understanding and color accuracy.
+- With more robust hardware, running the training process for a longer duration. Many GANs require extended training to allow the generator and discriminator to reach a stable Nash equilibrium, resulting in fewer artifacts and more refined details.
+- Integrate Fréchet Inception Distance (FID) calculation into the training loop. Then, plot i over time.
+  
 ## 📜 References
 - [Levin](https://www.researchgate.net/publication/2896183_Colorization_using_Optimization)
 
