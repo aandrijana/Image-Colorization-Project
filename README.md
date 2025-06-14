@@ -13,7 +13,7 @@ This project uses deep learning to automatically colorize grayscale images, rest
 - [➡️ Introduction](#️-introduction)
 - [📦 Usage](#-usage)
 - [🖌️ Color Space Choice](#️-color-space-choice)
-- [🗃️ Dataset and Preprocessing](#️-dataset-and-preprocessing)
+- [🗃️ Dataset](#️-dataset)
 - [🧹 Data Preparation](#️-data-preparation)
 - [⌨️ Project Challenges and Key Concepts](#️-project-challenges-and-key-concepts)
 - [⚙️ Model version and optimizers](#️-model-version-and-optimizers)
@@ -44,7 +44,7 @@ We implemented and experimented with state-of-the-art architectures like U-Net a
 
 This project uses the LAB color space instead of RGB to separate brightness from color information, simplifying the model’s learning task. For a detailed explanation of why LAB is important and how it benefits colorization, see the project notebook.
 
-## 🗃️ Dataset and Preprocessing
+## 🗃️ Dataset
 
 We use a dataset of 25,000 images in LAB color space, with grayscale (L channel) and color (AB channels) separated. Due to resource constraints, we train on a subset of 10,000 images.
 
@@ -52,7 +52,7 @@ Before training, images are resized and normalized to fit the model input requir
 
 ## 🧹 Data Preparation
 
-The dataset was split into training, validation, and test sets. We normalized all channels to the [-1, 1] range for optimal model performance. To enhance generalization, we applied simple data augmentation—random horizontal flips—to the training data.
+The dataset was split into training, validation, and test sets. We normalized all channels to the [-1, 1] range for optimal model performance. To enhance generalization, we applied simple data augmentation—random horizontal flips—to the training data. 
 
 ## ⌨️ Project Challenges and Key Concepts
 During this project, we encountered several challenges:
