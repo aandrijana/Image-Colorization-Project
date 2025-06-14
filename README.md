@@ -6,7 +6,7 @@ This is the final version of the image colorization project done by students of 
 Important note: Due to inability to delete past commits and some errors present in our previous GitHub repository's files, we decided to push the whole project only after completing everything.
 
 
-# 🎨 ColorizeIMG
+# 🎨 Image Colorization
 
 This project uses deep learning to automatically colorize grayscale images, restoring realistic and visually coherent colors.
 ## Table of Contents
