@@ -19,6 +19,7 @@ This project uses deep learning to automatically colorize grayscale images, rest
 - [⚙️ Model version and optimizers](#️-model-version-and-optimizers)
 - [👀 Results](#-results)
 - [📏 Metrics](#-metrics)
+- [📜 References](#-references)
 - [✒️ License](#-license)
 
 ## 👀 Overview
@@ -76,6 +77,12 @@ We also explored Generative Adversarial Networks (GANs), especially the Pix2Pix 
 
 ## 📏 Metrics
 
-
+## 📜 References
+(https://www.researchgate.net/publication/2896183_Colorization_using_Optimization)
+(https://medium.com/data-science/colorizing-black-white-images-with-u-net-and-conditional-gan-a-tutorial-81b2df111cd8)
+(https://richzhang.github.io/colorization/)
+(https://cs231n.stanford.edu/reports/2022/pdfs/109.pdf)
+(https://anne-guilbert.medium.com/black-and-white-image-colorization-with-deep-learning-53855922cda6)
+(https://youtu.be/4xoTD58Wt-0?feature=shared)
 ## ✒️ License
 MIT License
