@@ -9,6 +9,17 @@ Important note: Due to inability to delete past commits and some errors present 
 This project uses deep learning to automatically colorize grayscale images, restoring realistic and visually coherent colors.
 ## Table of Contents
 - [👀 Overview](#-overview)
+- [🔰 Getting started](#-getting-started)
+- [➡️ Introduction](#️-introduction)
+- [📦 Usage](#-usage)
+- [🖌️ Color Space Choice](#️-color-space-choice)
+- [🗃️ Dataset and Preprocessing](#️-dataset-and-preprocessing)
+- [🧹 Data Preparation](#️-data-preparation)
+- [⌨️ Project Challenges and Key Concepts](#️-project-challenges-and-key-concepts)
+- [⚙️ Model version and optimizers](#️-model-version-and-optimizers)
+- [👀 Results](#-results)
+- [📏 Metrics](#-metrics)
+- [✒️ License](#-license)
 
 ## 👀 Overview
 
