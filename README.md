@@ -11,7 +11,6 @@ Important note: Due to inability to delete past commits and some errors present 
 This project uses deep learning to automatically colorize grayscale images, restoring realistic and visually coherent colors.
 ## Table of Contents
 - [👀 Overview](#-overview)
-- [🔰 Getting started](#-getting-started)
 - [➡️ Introduction](#️-introduction)
 - [📦 Usage](#-usage)
 - [🖌️ Color Space Choice](#️-color-space-choice)
@@ -30,9 +29,6 @@ The main goal of this project is to develop an AI model capable of transforming 
 
 This project showcases the power of AI in creative image processing tasks and explores techniques such as convolutional neural networks (CNNs), image-to-image translation, and loss function optimization to achieve high-quality colorization results.
 
-## 🔰 Getting started
-
-The dataset is sourced from [Kaggle](https://www.kaggle.com/datasets/shravankumar9892/image-colorization/data), and the model will be trained using convolutional neural networks (CNNs), with support from frameworks such as PyTorch and OpenCV for preprocessing, training, and image manipulation.
 
 ## ➡️Introduction
 
@@ -47,6 +43,7 @@ We implemented and experimented with state-of-the-art architectures like U-Net a
 This project uses the LAB color space instead of RGB to separate brightness from color information, simplifying the model’s learning task. For a detailed explanation of why LAB is important and how it benefits colorization, see the project notebook.
 
 ## 🗃️ Dataset
+The dataset is sourced from [Kaggle](https://www.kaggle.com/datasets/shravankumar9892/image-colorization/data)
 
 We use a dataset of 25,000 images in LAB color space, with grayscale (L channel) and color (AB channels) separated. Due to resource constraints, we train on a subset of 10,000 images.
 
