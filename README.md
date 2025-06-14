@@ -57,21 +57,57 @@ The dataset was split into training, validation, and test sets. We normalized al
 For more details, check-out our [notebook](https://github.com/aandrijana/Image-Colorization-Project/blob/main/final_data_preprocessing.ipynb)
 
 ## ⌨️ Project Challenges and Key Concepts
-During this project, we encountered several challenges:
+### Main Challenges
+Our image colorization project presented a range of technical and practical challenges, many of which emerged through trial, error, and iterative learning. Below, we summarize the key issues we faced, organized in the order they arose during development.
 
-- Limited dataset quality and image resolution constrained model generalization.
+- Dataset Quality Limitations: We began by assembling a dataset of color images for training. While sufficient in size, we noticed that the image diversity and resolution were somewhat lacking. Many images lacked rich textures or varied lighting, which may have constrained the model’s ability to generalize — especially for more complex or rare visual scenes.
 
-- Due to Colab resource limits, we trained on 112×112 images.
+- Image Size Constraints: Due to storage and memory limitations, particularly on Google Colab, we had to make careful decisions about input resolution. After experimenting with several sizes, we settled on 112×112 pixels. Though this reduced image detail, it allowed us to train on full batches without exceeding memory limits or experiencing crashes.
 
-- Early normalization caused color distortions (reddish tint) which we fixed by correcting scaling.
+- Color Distortion from Normalization: In early preprocessing, we applied standard normalization techniques to all channels in the CIELAB color space. However, this introduced a critical issue: color distortion, particularly a strong red tint in both generated and ground truth images. This happened because the a and b channels were scaled improperly, biasing color predictions. Only after correcting the normalization ranges and ensuring proper de-normalization at output did the model produce natural-looking colors.
 
-- CLAHE contrast enhancement degraded results and was removed.
+- Experimentation with CLAHE: To enhance grayscale inputs, we tested CLAHE (Contrast Limited Adaptive Histogram Equalization), which improves local contrast. Surprisingly, this made results worse: the model struggled with the unnatural contrast levels, producing harsh and incoherent outputs. We removed CLAHE from our pipeline after confirming it degraded both visual quality and consistency.
 
-- Training on Colab was interrupted frequently; we split training into phases to cope.
+- Training Instability in Google Colab: Most of our training took place in Google Colab, which provided GPU access but also came with frequent runtime disconnections. These interruptions made it difficult to train through full epochs, especially for larger models. To work around this, we split training into three phases, gradually exposing the model to all a and b channels. This staged training helped maintain learning progress despite platform interruptions.
 
-- Image colorization is an inherently ambiguous problem requiring semantic understanding of scenes. Models like Zhang et al. leverage deep learning to infer object context, improving color accuracy.
+### The Role of Semantics in Image Colorization
+Image colorization is a fundamentally ill-posed problem — many grayscale images can correspond to multiple plausible color versions. For instance, a gray shirt could be red, blue, or green; the grayscale image alone doesn't provide enough information to decide. Early methods (e.g., Levin et al.) attempted to address this by using low-level cues like intensity similarity and spatial smoothness, but these are often insufficient in complex scenes.
 
-We also explored Generative Adversarial Networks (GANs), especially the Pix2Pix conditional GAN framework, which uses adversarial training for more realistic colorization results.
+Semantics — an understanding of what objects are — becomes critical in resolving this ambiguity. Zhang et al. (2016) pioneered the use of deep convolutional neural networks (CNNs) trained on large-scale image datasets to automatically learn the semantic structure of images. Their model doesn’t just look at pixel patterns; it infers object categories and context (e.g., "this region looks like sky", "this is probably a tree", "this is likely a human face").
+
+This semantic insight allows the model to make context-aware color decisions:
+
+Sky regions are predicted to be blue or gray, not green.
+
+Trees are colored in various shades of green or brown, depending on season/context.
+
+Human skin tones are predicted based on learned priors across diverse examples.
+
+Without this semantic layer, models often produce implausible or jarring results, especially in complex or ambiguous areas of the image. By embedding semantic knowledge, models like Zhang’s can generate colorizations that are not only photorealistic but consistent with human expectations.
+
+In essence, semantics bridge the gap between visual appearance and meaning, enabling more intelligent and believable colorization.
+
+### Generative Adversarial Networks and Pix2Pix for Image Colorization
+Generative Adversarial Networks (GANs) have become a powerful tool in image-to-image translation tasks, including image colorization. Introduced by Goodfellow et al. in 2014, GANs consist of two competing neural networks:
+
+A generator that attempts to create realistic images from input data
+
+A discriminator that tries to distinguish between real images (from the training set) and generated (fake) ones
+
+The generator learns to produce increasingly realistic outputs by trying to "fool" the discriminator, while the discriminator becomes better at spotting fakes. This adversarial training process encourages the generator to create outputs that are not only structurally accurate but also visually convincing.
+
+In the context of colorization, the generator takes a grayscale image as input and attempts to generate a plausible color version. The discriminator then evaluates whether the colorized image looks realistic compared to the true color ground truth.
+
+### Pix2Pix: Conditional GAN for Paired Image Translation
+Pix2Pix (Isola et al., 2017) is a type of conditional GAN (cGAN) designed for supervised image-to-image translation tasks — like grayscale-to-color conversion — where input-output image pairs are available during training.
+
+In Pix2Pix:
+
+The generator is typically a U-Net, which captures both low-level and high-level image features through skip connections.
+
+The discriminator is a PatchGAN, which classifies individual patches of the image (e.g., 70×70) instead of the whole image. This helps enforce local realism.
+
+Because Pix2Pix learns from paired grayscale–color image data, it can directly learn the mapping from gray levels to color distributions. The adversarial loss ensures the outputs are sharp and realistic, while an additional L1 loss between the generated image and the ground truth helps preserve content structure.
 
 ## ⚙️ Model version and optimizers
 
