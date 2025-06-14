@@ -72,16 +72,11 @@ Our image colorization project presented a range of technical and practical chal
 
 ### The Role of Semantics in Image Colorization
 Image colorization is a fundamentally ill-posed problem — many grayscale images can correspond to multiple plausible color versions. For instance, a gray shirt could be red, blue, or green; the grayscale image alone doesn't provide enough information to decide. Early methods (e.g., Levin et al.) attempted to address this by using low-level cues like intensity similarity and spatial smoothness, but these are often insufficient in complex scenes.
-
 Semantics — an understanding of what objects are — becomes critical in resolving this ambiguity. Zhang et al. (2016) pioneered the use of deep convolutional neural networks (CNNs) trained on large-scale image datasets to automatically learn the semantic structure of images. Their model doesn’t just look at pixel patterns; it infers object categories and context (e.g., "this region looks like sky", "this is probably a tree", "this is likely a human face").
 
 This semantic insight allows the model to make context-aware color decisions:
 
-Sky regions are predicted to be blue or gray, not green.
-
-Trees are colored in various shades of green or brown, depending on season/context.
-
-Human skin tones are predicted based on learned priors across diverse examples.
+Sky regions are predicted to be blue or gray, not green. Trees are colored in various shades of green or brown, depending on season/context. Human skin tones are predicted based on learned priors across diverse examples.
 
 Without this semantic layer, models often produce implausible or jarring results, especially in complex or ambiguous areas of the image. By embedding semantic knowledge, models like Zhang’s can generate colorizations that are not only photorealistic but consistent with human expectations.
 
@@ -98,16 +93,7 @@ The generator learns to produce increasingly realistic outputs by trying to "foo
 
 In the context of colorization, the generator takes a grayscale image as input and attempts to generate a plausible color version. The discriminator then evaluates whether the colorized image looks realistic compared to the true color ground truth.
 
-### Pix2Pix: Conditional GAN for Paired Image Translation
-Pix2Pix (Isola et al., 2017) is a type of conditional GAN (cGAN) designed for supervised image-to-image translation tasks — like grayscale-to-color conversion — where input-output image pairs are available during training.
 
-In Pix2Pix:
-
-The generator is typically a U-Net, which captures both low-level and high-level image features through skip connections.
-
-The discriminator is a PatchGAN, which classifies individual patches of the image (e.g., 70×70) instead of the whole image. This helps enforce local realism.
-
-Because Pix2Pix learns from paired grayscale–color image data, it can directly learn the mapping from gray levels to color distributions. The adversarial loss ensures the outputs are sharp and realistic, while an additional L1 loss between the generated image and the ground truth helps preserve content structure.
 
 ## ⚙️ Model version and optimizers
 
