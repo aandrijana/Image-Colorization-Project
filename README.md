@@ -57,17 +57,17 @@ The dataset was split into training, validation, and test sets. We normalized al
 ## ⌨️ Project Challenges and Key Concepts
 During this project, we encountered several challenges:
 
-Limited dataset quality and image resolution constrained model generalization.
+- Limited dataset quality and image resolution constrained model generalization.
 
-Due to Colab resource limits, we trained on 112×112 images.
+- Due to Colab resource limits, we trained on 112×112 images.
 
-Early normalization caused color distortions (reddish tint) which we fixed by correcting scaling.
+- Early normalization caused color distortions (reddish tint) which we fixed by correcting scaling.
 
-CLAHE contrast enhancement degraded results and was removed.
+- CLAHE contrast enhancement degraded results and was removed.
 
-Training on Colab was interrupted frequently; we split training into phases to cope.
+- Training on Colab was interrupted frequently; we split training into phases to cope.
 
-Image colorization is an inherently ambiguous problem requiring semantic understanding of scenes. Models like Zhang et al. leverage deep learning to infer object context, improving color accuracy.
+- Image colorization is an inherently ambiguous problem requiring semantic understanding of scenes. Models like Zhang et al. leverage deep learning to infer object context, improving color accuracy.
 
 We also explored Generative Adversarial Networks (GANs), especially the Pix2Pix conditional GAN framework, which uses adversarial training for more realistic colorization results.
 
