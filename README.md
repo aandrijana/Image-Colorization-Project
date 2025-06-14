@@ -8,7 +8,7 @@ Important note: Due to inability to delete past commits and some errors present 
 
 This project uses deep learning to automatically colorize grayscale images, restoring realistic and visually coherent colors.
 ## Table of Contents
-[https://github.com/aandrijana/Image-Colorization-Project?tab=readme-ov-file#-overview](##Overview)
+[https://github.com/aandrijana/Image-Colorization-Project?tab=readme-ov-file#-overview](#Overview)
 ## 👀 Overview
 
 The main goal of this project is to develop an AI model capable of transforming grayscale images into their colorized counterparts. The aim is to model the complex relationship between luminance (grayscale intensity) and plausible color distributions using deep learning techniques. By learning from large datasets of color images, the model can predict realistic and visually appealing color versions of black-and-white inputs.
