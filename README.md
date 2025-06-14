@@ -20,7 +20,7 @@ This project uses deep learning to automatically colorize grayscale images, rest
 - [⚙️ Model version and optimizers](#️-model-version-and-optimizers)
 - [👀 Results](#-results)
 - [📏 Metrics](#-metrics)
-- [## 🔮 Conclusion and future steps](#-conclusion-and-future-steps).
+- [🔮 Conclusion and future steps](#-conclusion-and-future-steps).
 - [📜 References](#-references)
 - [✒️ License](#-license)
   
