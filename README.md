@@ -7,7 +7,7 @@ Important note: Due to inability to delete past commits and some errors present 
 # 🎨 ColorizeIMG
 
 This project uses deep learning to automatically colorize grayscale images, restoring realistic and visually coherent colors.
-
+## Table of Contents
 ## 👀 Overview
 
 The main goal of this project is to develop an AI model capable of transforming grayscale images into their colorized counterparts. The aim is to model the complex relationship between luminance (grayscale intensity) and plausible color distributions using deep learning techniques. By learning from large datasets of color images, the model can predict realistic and visually appealing color versions of black-and-white inputs.
@@ -23,7 +23,7 @@ The dataset is sourced from [Kaggle](https://www.kaggle.com/datasets/shravankuma
 This project tackles the classic and visually striking deep learning challenge of image colorization—converting grayscale images into plausible, colorful ones. Unlike simple pixel mappings, colorization requires the model to understand the semantic content of images, learning that skies tend to be blue, grass is green, and context matters.
 
 We implemented and experimented with state-of-the-art architectures like U-Net and GANs, gaining practical experience with skip connections, transfer learning, and large datasets. Along the way, we faced challenges such as balancing generator and discriminator training, which deepened our understanding of adversarial learning.
-tc
+
 ## 📦 Usage 
 
 ## 🖌️Color Space Choice
@@ -62,6 +62,7 @@ We also explored Generative Adversarial Networks (GANs), especially the Pix2Pix 
 ## 👀 Results
 
 ## 📏 Metrics
+
 
 ## ✒️ License
 MIT License
