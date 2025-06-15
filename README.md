@@ -101,6 +101,8 @@ Firstly, let's take a look at the model architecture:
 - Generator encoder architecture:
 
 <img src="https://github.com/user-attachments/assets/fd155bc2-ffe3-4442-8e3b-b667012a0642" width="300"/>
+
+
 💡 This is the encoder or downsampling path of a U-Net generator. It takes an input image and repeatedly downsamples it, progressively extracting more abstract, high-level features. Each block halves the spatial dimensions and increases the channel depth, compressing the input into a compact feature representation at the "bottleneck".
 
 
