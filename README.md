@@ -44,7 +44,7 @@ We have provided Google Colab notebook where you can try our final product yours
 
 ## 🖌️Color Space Choice
 
-This project uses the LAB color space instead of RGB to separate brightness from color information, simplifying the model’s learning task. For a detailed explanation of why LAB is important and how it benefits colorization, see the project notebook.
+This project uses the LAB color space instead of RGB to separate brightness from color information, simplifying the model’s learning task. For a detailed explanation of why LAB is important and how it benefits colorization, see [here](https://github.com/aandrijana/Image-Colorization-Project/blob/main/Introduction_Data_Loading_And_Exploration.ipynb)
 
 ## 🗃️ Dataset
 The dataset is sourced from [Kaggle](https://www.kaggle.com/datasets/shravankumar9892/image-colorization/data)
