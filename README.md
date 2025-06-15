@@ -183,6 +183,7 @@ With access to more computational resources, the key priorities are:
 - [Stanford](https://cs231n.stanford.edu/reports/2022/pdfs/109.pdf)
 
 - [Anne Guilbert](https://anne-guilbert.medium.com/black-and-white-image-colorization-with-deep-learning-53855922cda6)
+ 
 - [Pix2Pix paper](https://arxiv.org/pdf/1611.07004v3)
 
 ## ✒️ License
