@@ -129,6 +129,7 @@ Firstly, let's take a look at the model architecture:
 This is just a brief overview of the model, for very detailed explanation we recommend checking out our [model description](https://github.com/aandrijana/Image-Colorization-Project/blob/main/model_description.ipynb) .
 If you are interested in more detailed overview of Pix2Pix we recommend reading [this article](https://neurohive.io/en/popular-networks/pix2pix-image-to-image-translation/) .
 ## 👀 Results
+![Image](https://github.com/user-attachments/assets/bbc5265b-1aeb-4a26-ad1b-e5e53a6fa405)
 
 ## 📏 Metrics
 
