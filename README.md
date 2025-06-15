@@ -40,7 +40,7 @@ We implemented and experimented with state-of-the-art architectures like U-Net a
 
 ## 📦 Usage 
 
-We have provided google colab notebook where you can try our final product yourself! Click [here](Test_the_model.ipynb),open in colab, run the cells, upload your grayscale image and wait for the magic to happen!
+We have provided Google Colab notebook where you can try our final product yourself! Click [here](Test_the_model.ipynb),open in colab, run the cells, upload your grayscale image and wait for the magic to happen!
 
 ## 🖌️Color Space Choice
 
