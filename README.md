@@ -125,7 +125,9 @@ Firstly, let's take a look at the model architecture:
 
 
 - Following the methodology of the original Pix2Pix paper, we utilized the Adam optimizer for both networks, configured with a learning rate of 2×10⁻⁴ and a β₁ momentum parameter of 0.5.
-- This is just a brief overview of the model, for very detailed explanation we recommend checking out our [model description](https://github.com/aandrijana/Image-Colorization-Project/blob/main/model_description.ipynb)
+
+This is just a brief overview of the model, for very detailed explanation we recommend checking out our [model description](https://github.com/aandrijana/Image-Colorization-Project/blob/main/model_description.ipynb) .
+If you are interested in more detailed overview of Pix2Pix we recommend reading [this article](https://neurohive.io/en/popular-networks/pix2pix-image-to-image-translation/) .
 ## 👀 Results
 
 ## 📏 Metrics
