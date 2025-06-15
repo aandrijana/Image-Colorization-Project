@@ -98,20 +98,25 @@ In the context of colorization, the generator takes a grayscale image as input a
 ## ⚙️ Model version and optimizers
 
 Firstly, let's take a look at the model architecture:
-Generator encoder architecture:
+- Generator encoder architecture:
 
 <img src="https://github.com/user-attachments/assets/fd155bc2-ffe3-4442-8e3b-b667012a0642" width="300"/>
+💡 This is the encoder or downsampling path of a U-Net generator. It takes an input image and repeatedly downsamples it, progressively extracting more abstract, high-level features. Each block halves the spatial dimensions and increases the channel depth, compressing the input into a compact feature representation at the "bottleneck".
 
 
-Generator decoder architecture:
+
+- Generator decoder architecture:
 
 <img src="https://github.com/user-attachments/assets/f40ac993-64c7-4433-a2cf-0faf2119eb8a" width="300"/>
 
-Discriminator backbone architecture:
+ 💡This is the decoder or upsampling path of the generator, acting as the counterpart to the encoder. It starts with the compressed feature representation from the bottleneck and progressively upsamples it. By doubling the spatial dimensions and reducing the channel depth at each step, it reconstructs the image, translating the learned features back into a high-resolution output.
+
+
+- Discriminator backbone architecture:
 
 <img src="https://github.com/user-attachments/assets/4f66ab11-edeb-4733-b9ee-a9b3f97b0599" width="300"/>
 
-
+💡 This is the core feature extraction network for a PatchGAN discriminator. Unlike a traditional discriminator that outputs a single value for the entire image, this model outputs a 2D feature map (e.g., 14x14). Each value in this map corresponds to a different overlapping "patch" of the input image, classifying it as real or fake. This encourages the generator to focus on creating realistic details across the entire image.
 
 ## 👀 Results
 
