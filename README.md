@@ -97,6 +97,14 @@ In the context of colorization, the generator takes a grayscale image as input a
 
 ## ⚙️ Model version and optimizers
 
+Firstly, let's take a look at the model architecture:
+
+Generator decoder architecture:
+
+![Image](https://github.com/user-attachments/assets/f40ac993-64c7-4433-a2cf-0faf2119eb8a)
+
+
+
 ## 👀 Results
 
 ## 📏 Metrics
