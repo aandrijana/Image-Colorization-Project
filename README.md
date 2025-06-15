@@ -98,11 +98,18 @@ In the context of colorization, the generator takes a grayscale image as input a
 ## ⚙️ Model version and optimizers
 
 Firstly, let's take a look at the model architecture:
+Generator encoder architecture:
+
+<img src="https://github.com/user-attachments/assets/fd155bc2-ffe3-4442-8e3b-b667012a0642" width="300"/>
+
 
 Generator decoder architecture:
 
 <img src="https://github.com/user-attachments/assets/f40ac993-64c7-4433-a2cf-0faf2119eb8a" width="300"/>
 
+Discriminator backbone architecture:
+
+<img src="https://github.com/user-attachments/assets/4f66ab11-edeb-4733-b9ee-a9b3f97b0599" width="300"/>
 
 
 
