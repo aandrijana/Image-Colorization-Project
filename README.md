@@ -131,7 +131,22 @@ If you are interested in more detailed overview of Pix2Pix we recommend reading 
 ## 👀 Results
 ![Image](https://github.com/user-attachments/assets/bbc5265b-1aeb-4a26-ad1b-e5e53a6fa405)
 
+After the whole training process was finished, this was the result we got.
+
+We are very sattisfied with the results we attained, but of course there is always room for improvement. The model seems to have struggled with the background and the clothing. The "Ground Truth" has warm, golden/yellowish tones in the background and on the drapery. Our model's prediction has a more muted, slightly greenish/yellowish noisy texture in the background and has rendered the clothing with more reddish hues. This is a classic challenge for colorization models—getting the dominant, broad colors right while struggling with the more subtle secondary and background colors.
+
+Here are some metrics we got upon finishing the last epoch and their interpretations, although we will talk some more about metrics below:
+
+ Avg Gen Loss: 8.1154 | Avg Disc Loss: 0.9269 | Val PSNR: 19.48 | Val SSIM: 0.6694
+
+ 
+To evaluate the performance of our model, we used several key metrics: Generator Loss, Discriminator Loss, Peak Signal-to-Noise Ratio (PSNR), and Structural Similarity Index Measure (SSIM). The Generator Loss reflects how well the generator is producing images that resemble the ground truth, with lower values indicating better reconstruction. The Discriminator Loss measures how effectively the discriminator can distinguish real from generated images; values closer to 1 suggest it is being effectively challenged by the generator. PSNR quantifies the similarity between the generated and original images in terms of pixel intensity; our average PSNR of 19.48 dB indicates visible differences but still retains some structural accuracy. SSIM, which evaluates perceived image quality based on luminance, contrast, and structure, reached 0.6694, suggesting moderate similarity. Together, these metrics show that while the model captures general structure, there is room for improvement in fine detail and perceptual quality.
+
+ 
+
 ## 📏 Metrics
+
+Now, let's dive deeper in the training and evaluation metrics used to assess our model's performance. 
 
 ## 🏁 Conclusion and future steps
 This project successfully implements a Generative Adversarial Network (GAN) to perform automatic image colorization. The model produces vibrant and perceptually realistic colors.  The primary limitation was hardware memory, which constrained the training resolution and model complexity.
