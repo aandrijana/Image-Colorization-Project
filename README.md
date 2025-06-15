@@ -128,6 +128,9 @@ Firstly, let's take a look at the model architecture:
 
 This is just a brief overview of the model, for very detailed explanation we recommend checking out our [model description](https://github.com/aandrijana/Image-Colorization-Project/blob/main/model_description.ipynb) .
 If you are interested in more detailed overview of Pix2Pix we recommend reading [this article](https://neurohive.io/en/popular-networks/pix2pix-image-to-image-translation/) .
+
+
+### IMPORTANT NOTE:  Both training and its evaluation can be found together in forementioned notebook.
 ## 👀 Results
 ![Image](https://github.com/user-attachments/assets/bbc5265b-1aeb-4a26-ad1b-e5e53a6fa405)
 
@@ -155,6 +158,8 @@ The training progress over 50 epochs demonstrates meaningful trends in both adve
 On the right, validation metrics—PSNR and SSIM—both show an upward trend across epochs. The PSNR consistently increased, reaching an average of 19.48 dB, while the SSIM stabilized around 0.6694. These values indicate that while the model preserves structural information and general content, there is still visible discrepancy compared to the ground truth, particularly in finer textures and color accuracy.
 
 Additionally, the Fréchet Inception Distance (FID) was computed at 72.471, which, while not optimal, further confirms that the model generates outputs with perceptual similarity to real images, albeit with room for enhancement.
+
+### Important note: Instruction for visualizing is included in our model description file.
 
 ## 🏁 Conclusion and future steps
 This project successfully implements a Generative Adversarial Network (GAN) to perform automatic image colorization. The model produces vibrant and perceptually realistic colors.  The primary limitation was hardware memory, which constrained the training resolution and model complexity.
