@@ -148,6 +148,14 @@ To evaluate the performance of our model, we used several key metrics: Generator
 
 Now, let's dive deeper in the training and evaluation metrics used to assess our model's performance. 
 
+![Image](https://github.com/user-attachments/assets/8e53e503-883c-4364-ab2f-4549dc0cc64e)
+
+The training progress over 50 epochs demonstrates meaningful trends in both adversarial and perceptual metrics. As shown in the left plot, the Generator Loss steadily decreased, indicating ongoing improvements in the model's ability to generate realistic outputs. Meanwhile, the Discriminator Loss remained relatively stable around ~0.9, suggesting a balanced adversarial dynamic where the generator continues to challenge the discriminator.
+
+On the right, validation metrics—PSNR and SSIM—both show an upward trend across epochs. The PSNR consistently increased, reaching an average of 19.48 dB, while the SSIM stabilized around 0.6694. These values indicate that while the model preserves structural information and general content, there is still visible discrepancy compared to the ground truth, particularly in finer textures and color accuracy.
+
+Additionally, the Fréchet Inception Distance (FID) was computed at 72.471, which, while not optimal, further confirms that the model generates outputs with perceptual similarity to real images, albeit with room for enhancement.
+
 ## 🏁 Conclusion and future steps
 This project successfully implements a Generative Adversarial Network (GAN) to perform automatic image colorization. The model produces vibrant and perceptually realistic colors.  The primary limitation was hardware memory, which constrained the training resolution and model complexity.
 
