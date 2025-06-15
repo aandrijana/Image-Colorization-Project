@@ -40,6 +40,8 @@ We implemented and experimented with state-of-the-art architectures like U-Net a
 
 ## 📦 Usage 
 
+We have provided google colab notebook where you can try our final product yourself! Click [here](Test_the_model.ipynb),open in colab, run the cells, upload your grayscale image and wait for the magic to happen!
+
 ## 🖌️Color Space Choice
 
 This project uses the LAB color space instead of RGB to separate brightness from color information, simplifying the model’s learning task. For a detailed explanation of why LAB is important and how it benefits colorization, see the project notebook.
@@ -121,6 +123,9 @@ Firstly, let's take a look at the model architecture:
 
 💡 This is the core feature extraction network for a PatchGAN discriminator. Unlike a traditional discriminator that outputs a single value for the entire image, this model outputs a 2D feature map (e.g., 14x14). Each value in this map corresponds to a different overlapping "patch" of the input image, classifying it as real or fake. This encourages the generator to focus on creating realistic details across the entire image.
 
+
+- Following the methodology of the original Pix2Pix paper, we utilized the Adam optimizer for both networks, configured with a learning rate of 2×10⁻⁴ and a β₁ momentum parameter of 0.5.
+- This is just a brief overview of the model, for very detailed explanation we recommend checking out our [model description](https://github.com/aandrijana/Image-Colorization-Project/blob/main/model_description.ipynb)
 ## 👀 Results
 
 ## 📏 Metrics
@@ -133,7 +138,7 @@ With access to more computational resources, the key priorities are:
 - Train on higher-resolution images (228x228) with a deeper model to generate finer details.
 - Integrate attention mechanisms to improve contextual understanding and color accuracy.
 - With more robust hardware, running the training process for a longer duration. Many GANs require extended training to allow the generator and discriminator to reach a stable Nash equilibrium, resulting in fewer artifacts and more refined details.
-- Integrate Fréchet Inception Distance (FID) calculation into the training loop. Then, plot i over time.
+- Integrate Fréchet Inception Distance (FID) calculation into the training loop. Then, plot it over time.
   
 ## 📜 References
 - [Levin](https://www.researchgate.net/publication/2896183_Colorization_using_Optimization)
@@ -147,6 +152,7 @@ With access to more computational resources, the key priorities are:
 - [Stanford](https://cs231n.stanford.edu/reports/2022/pdfs/109.pdf)
 
 - [Anne Guilbert](https://anne-guilbert.medium.com/black-and-white-image-colorization-with-deep-learning-53855922cda6)
+- [Pix2Pix paper](https://arxiv.org/pdf/1611.07004v3)
 
 ## ✒️ License
 MIT License
