@@ -101,7 +101,8 @@ Firstly, let's take a look at the model architecture:
 
 Generator decoder architecture:
 
-![Image](https://github.com/user-attachments/assets/f40ac993-64c7-4433-a2cf-0faf2119eb8a)
+<img src="https://github.com/user-attachments/assets/f40ac993-64c7-4433-a2cf-0faf2119eb8a" width="300"/>
+
 
 
 
